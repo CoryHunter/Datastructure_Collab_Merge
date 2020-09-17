@@ -4,12 +4,27 @@
     <meta charset="UTF-8"/>
     <title>Cory's Data Structure App</title>
     <script src = "go.js"></script>
-    <script src = "index.js"></script>
+    <link href = "index.css" rel = "stylesheet" type = "text/css">
 </head>
 <body onload="init()">
-    <h1>Test</h1>
-    <div id = "DiagramDiv1" style="width:300px; height:300px; border: 1px solid black;"></div>
-    <div id = "DiagramDiv2" style="width:300px; height:300px; border: 1px solid black;"></div>
-    <div id = "DiagramDiv3" style="width:300px; height:300px; border: 1px solid black;"></div>
+    <h1>Diagrams to Manipulate</h1>
+    <div id = "ModDiagrams">
+        <div id = "ModDiagram1" style="border: 1px solid black; float:left" ></div>
+        <div id = "ModDiagram2" style="border: 1px solid black; float:left"></div>
+        <div id = "ModDiagram3" style="border: 1px solid black; float:left"></div>
+    </div>
+    <div id = "ButtonsDiv">
+        <button id = "Button-Test">Remove Node</button>
+        <select class="combo">
+            <option value="Select">Select....</option>
+            <option value="html">HTML 5</option>
+            <option value="css">CSS 3</option><select/>
+    </div>
+    <div id = "ResultDiagramDiv">
+        <h2>Resultant Diagram</h2>
+        <div id = "DiagramResult" style="border: 1px solid black; margin:0 auto" ></div>
+    </div>
+    <script src = "index.js"></script>
 </body>
 </html>
+

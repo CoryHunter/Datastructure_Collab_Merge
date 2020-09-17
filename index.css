@@ -1,0 +1,57 @@
+#ModDiagram1 {
+    position: relative;
+    width: 33%;
+    height: 100%;
+}
+#ModDiagram2 {
+    position: relative;
+    width: 33%;
+    height: 100%;
+}
+#ModDiagram3 {
+    position: relative;
+    width: 33%;
+    height: 100%;
+}
+#ModDiagrams {
+    height: 34vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+#Button-Test {
+    top: 50%;
+
+}
+#ModDiagram1Delete {
+    position:absolute;
+    transition: .5s ease;
+    top: 50%;
+    left: 13.5%;
+}
+#DiagramResult {
+    position: relative;
+    width: 33%;
+    height: 100%;
+}
+#ResultDiagramDiv {
+    height: 34vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#ButtonsDiv {
+    height: 10vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
