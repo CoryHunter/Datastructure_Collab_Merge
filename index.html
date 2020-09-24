@@ -14,11 +14,13 @@
         <div id = "ModDiagram3" style="border: 1px solid black; float:left"></div>
     </div>
     <div id = "ButtonsDiv">
-        <button id = "Button-Test">Remove Node</button>
-        <select class="combo">
+        <select id = "Remove-List1" class="combo">
             <option value="Select">Select....</option>
-            <option value="html">HTML 5</option>
-            <option value="css">CSS 3</option><select/>
+        </select><br>
+        <button id = "Remove-Button1", onclick = "remove_node(1, Diagram1 ,selectors.options1)">Remove Node</button><br>
+        <label for="New-Node-Name1">New Node:</label><br>
+        <input type="text" id="New-Node-Name1" name="New-Node-Name1"><br>
+        <button id = "Add-Button1", onclick = "add_node(1, Diagram1 ,selectors.options1)">Add Node</button><br>
     </div>
     <div id = "ResultDiagramDiv">
         <h2>Resultant Diagram</h2>
