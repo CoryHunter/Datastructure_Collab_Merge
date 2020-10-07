@@ -1,5 +1,5 @@
 let optset = []  // 1 is add_node, 2 is add link, 3 is delete
-let nodes = ["1","2"];
+let nodes = ["1","2","3"];
 let selectors = {
     options1 : {
         selectBoxRemove : document.getElementById("Remove-List1"),
@@ -7,11 +7,11 @@ let selectors = {
     },
 
     options2 : {
-        selectBoxRemove : document.getElementById("Remove-List1"),
+        selectBoxRemove : document.getElementById("Remove-List2"),
         nodes : nodes
     },
     options3 : {
-        selectBoxRemove : document.getElementById("Remove-List1"),
+        selectBoxRemove : document.getElementById("Remove-List3"),
         nodes : nodes
     }
 }
@@ -34,7 +34,7 @@ function init() {
     Diagram3.model = new go.GraphLinksModel(nodeData, linkData);
     DiagramResult = $(go.Diagram, "DiagramResult")
     DiagramResult.model = new go.GraphLinksModel(nodeData, linkData);
-    init_options(selectors.options1);
+    init_options();
     add_link("1", "3",Diagram1,selectors.options1)
 }
 
@@ -43,9 +43,9 @@ function add_node(diagram_num, diagram, option) {
     if (diagram_num == 1) {
         to_add = document.getElementById("New-Node-Name1").value;
     } else if (diagram_num == 2) {
-        to_add = document.getElementById("New-Node-Name1").value;
+        to_add = document.getElementById("New-Node-Name2").value;
     } else {
-        to_add = document.getElementById("New-Node-Name1").value;
+        to_add = document.getElementById("New-Node-Name3").value;
     }
     diagram.model.addNodeData({key : to_add});
     optset.push({1 : to_add});
@@ -57,11 +57,10 @@ function remove_node(diagram_num, diagram, option) {
     let to_remove;
     if (diagram_num == 1){
         to_remove = document.getElementById("Remove-List1").value;
-        console.log(to_remove)
     } else if (diagram_num == 2) {
-        to_remove = document.getElementById("Remove-List1").value;
+        to_remove = document.getElementById("Remove-List2").value;
     } else {
-        to_remove = document.getElementById("Remove-List1").value;
+        to_remove = document.getElementById("Remove-List3").value;
     }
     let node = diagram.findNodeForKey(to_remove);
     diagram.model.removeNodeData(node.data);
@@ -72,16 +71,39 @@ function remove_node(diagram_num, diagram, option) {
             option.selectBoxRemove.remove(i);
         }
     }
-    console.log(optset);
 }
 function add_link(from_node, to_node, diagram, option) {
     diagram.model.addLinkData({from: from_node, to: to_node });
     optset.push({2:{from: from_node, to: to_node }});
 }
 
-function init_options (option) {
-    for(let i = 0, l = nodes.length; i < l; i++){
-        option.selectBoxRemove.options.add( new Option(option.nodes[i]));
+function init_options () {
+    option_list = [selectors.options1, selectors.options2, selectors.options3]
+    for(let j = 0, len = option_list.length; j < len; j++) {
+        for (let i = 0, l = nodes.length; i < l; i++) {
+            option_list[j].selectBoxRemove.options.add(new Option(option_list[j].nodes[i]));
+        }
+    }
+}
+function merge_optset(){
+    for(let m = 1; m < 5; m++){
+        for (let k = 0, opts = optset.length; k < opts; k++) {
+            if (Object.keys(optset[k])[0] == m){
+                if(m == 1){
+                    console.log("Add: ");
+                    console.log(optset[k]);
+                } else if(m == 2){
+                    console.log("Link: ");
+                    console.log(optset[k]);
+                } else if(m == 3){
+                    console.log("Delete: ");
+                    console.log(optset[k]);
+                }
+            }
+        }
     }
 }
 
+function log_optset() {
+    console.log(optset);
+}
