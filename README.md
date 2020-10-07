@@ -10,6 +10,8 @@ The Code itself is written in JavaScript using GOJS. It is then displayed using 
 The outline of the program was made in oNote which is an event modeling tool. Here is
 the Event Model:
 
+![oNotes](/README_IMG/Data_oNote.jpg)
+
 ## TODO:
 - Implement the OptSet translation function
 - Implement the classification function as outlined in *Algorithm Design and Optimization*
