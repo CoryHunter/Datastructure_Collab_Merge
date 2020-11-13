@@ -107,3 +107,9 @@ function merge_optset(){
 function log_optset() {
     console.log(optset);
 }
+function classify_tree() {
+    console.log(optset);
+}
+function balance_tree() {
+    console.log(optset);
+}

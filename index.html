@@ -14,32 +14,45 @@
         <div id = "ModDiagram3" style="border: 1px solid black; float:left"></div>
     </div>
     <div id = "ButtonsDiv">
-
-        <select id = "Remove-List1" class="combo">
-            <option value="Select">Select....</option>
-        </select><br>
-        <button id = "Remove-Button1", onclick = "remove_node(1, Diagram1 ,selectors.options1)">Remove Node 1</button><br>
-        <label for="New-Node-Name1">New Node 1:</label><br>
-        <input type="text" id="New-Node-Name1" name="New-Node-Name1"><br>
-        <button id = "Add-Button1", onclick = "add_node(1, Diagram1 ,selectors.options1)">Add Node 1</button><br>
-
-        <select id = "Remove-List2" class="combo">
-            <option value="Select">Select....</option>
-        </select><br>
-        <button id = "Remove-Button2", onclick = "remove_node(2, Diagram2 ,selectors.options2)">Remove Node 2</button><br>
-        <label for="New-Node-Name2">New Node 2:</label><br>
-        <input type="text" id="New-Node-Name2" name="New-Node-Name2"><br>
-        <button id = "Add-Button2", onclick = "add_node(2, Diagram2 ,selectors.options2)">Add Node 2</button><br>
-
-        <select id = "Remove-List3" class="combo">
-            <option value="Select">Select....</option>
-        </select><br>
-        <button id = "Remove-Button3", onclick = "remove_node(3, Diagram3 ,selectors.options3)">Remove Node 3</button><br>
-        <label for="New-Node-Name3">New Node 3:</label><br>
-        <input type="text" id="New-Node-Name3" name="New-Node-Name3"><br>
-        <button id = "Add-Button3", onclick = "add_node(3, Diagram3 ,selectors.options3)">Add Node 3</button><br>
-        <button id = "Log OptSet", onclick = "log_optset()">Log OptSet</button><br>
-        <button id = "Merge", onclick = "merge_optset()">Merge</button><br>
+        <div id = "Diagram1Buttons">
+            <div id = "InnerDiagram1Buttons">
+                <select id = "Remove-List1" class="combo">
+                    <option value="Select">Select....</option>
+                </select><br>
+                <button id = "Remove-Button1", onclick = "remove_node(1, Diagram1 ,selectors.options1)">Remove Node 1</button><br>
+                <label for="New-Node-Name1">New Node 1:</label><br>
+                <input type="text" id="New-Node-Name1" name="New-Node-Name1"><br>
+                <button id = "Add-Button1", onclick = "add_node(1, Diagram1 ,selectors.options1)">Add Node 1</button><br>
+            </div>
+        </div>
+        <div id = "Diagram2Buttons">
+            <div id = "InnerDiagram2Buttons">
+                <select id = "Remove-List2" class="combo">
+                    <option value="Select">Select....</option>
+                </select><br>
+                <button id = "Remove-Button2", onclick = "remove_node(2, Diagram2 ,selectors.options2)">Remove Node 2</button><br>
+                <label for="New-Node-Name2">New Node 2:</label><br>
+                <input type="text" id="New-Node-Name2" name="New-Node-Name2"><br>
+                <button id = "Add-Button2", onclick = "add_node(2, Diagram2 ,selectors.options2)">Add Node 2</button><br>
+            </div>
+        </div>
+        <div id = "Diagram3Buttons" >
+            <div id = "InnerDiagram3Buttons">
+                <select id = "Remove-List3" class="combo">
+                    <option value="Select">Select....</option>
+                </select><br>
+                <button id = "Remove-Button3", onclick = "remove_node(3, Diagram3 ,selectors.options3)">Remove Node 3</button><br>
+                <label for="New-Node-Name3">New Node 3:</label><br>
+                <input type="text" id="New-Node-Name3" name="New-Node-Name3"><br>
+                <button id = "Add-Button3", onclick = "add_node(3, Diagram3 ,selectors.options3)">Add Node 3</button><br>
+            </div>
+        </div>
+        <div id = "OptsetDiv">
+            <button id = "Log OptSet", onclick = "log_optset()">Log OptSet</button><br>
+            <button id = "Merge", onclick = "merge_optset()">Merge</button><br>
+            <button id = "Classify", onclick = "classify_tree()">Classify</button><br>
+            <button id = "Balance", onclick = "balance_tree()">Balance</button><br>
+        </div>
     </div>
     <div id = "ResultDiagramDiv">
         <h2>Resultant Diagram</h2>
